@@ -31,7 +31,8 @@ li_1 = copy.deepcopy(li)
 li_2 = copy.deepcopy(li)
 quick_sort(li_1)
 print(li_1)
-print(insert_sort(li_2))
+insert_sort(li_2)
+print(li_2)
 
 
 
