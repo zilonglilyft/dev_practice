@@ -12,3 +12,4 @@ def insert_sort(li):
 
 li = [random.randint(0,100000) for i in range(10000)]
 insert_sort(li)
+print(li)
