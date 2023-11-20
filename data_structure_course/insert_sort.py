@@ -6,8 +6,9 @@ def insert_sort(li):
         tmp = li[i]
         j = i - 1
         while j >= 0 and li[j] > tmp:
-            li[j+1], li[j] = li[j], li[j+1]
+            li[j+1] =  li[j]
             j -= 1
+        li[j+1] = tmp
 
 
 li = [random.randint(0,100000) for i in range(10000)]
