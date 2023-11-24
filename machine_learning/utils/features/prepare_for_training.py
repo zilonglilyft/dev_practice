@@ -1,7 +1,7 @@
 import numpy as np
-from normalize import normalize
-from generate_sinusoids import generate_sinusoids
-from generate_polynomials import generate_polynomials
+from machine_learning.utils.features.normalize import normalize
+from machine_learning.utils.features.generate_sinusoids import generate_sinusoids
+from machine_learning.utils.features.generate_polynomials import generate_polynomials
 
 def prepare_for_training(data,polynomial_degree=0, sinusoid_degree=0, normalize_data=True):
     num_examples = data.shape[0]
@@ -32,6 +32,7 @@ def prepare_for_training(data,polynomial_degree=0, sinusoid_degree=0, normalize_
 
     # add one row for intercept.
     data_processed = np.hstack((np.ones((num_examples, 1)), data_processed))
+    return data_processed, features_mean, features_deviation
 
     """
     np.concatenate((a,b), axis) => axis = 0, concat on rows; 1 concat on columns
