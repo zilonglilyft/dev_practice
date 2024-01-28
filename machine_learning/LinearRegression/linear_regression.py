@@ -1,6 +1,7 @@
 import numpy as np
 from machine_learning.utils.features.prepare_for_training import prepare_for_training
 
+
 class LinearRegression:
     def __init__(self, data, labels, polynomial_degree = 0, sinusoid_degree = 0, normalize_data = True):
         """
